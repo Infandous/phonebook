@@ -1,8 +1,8 @@
 const express = require('express')
 const morgan = require('morgan')
 const app = express()
-//const cors = require('cors')
-//app.use(cors())
+const cors = require('cors')
+app.use(cors())
 //var morgan = require('morgan')
 
 const requestLogger = (request, response, next) => {
@@ -95,7 +95,7 @@ app.post('/api/persons',(request,response)=>{
 
 app.use(unknownEndpoint)
 
-const PORT = 3001
+const PORT = process.env.PORT || 3001
 app.listen(PORT, ()=>{
     console.log(`listening on port ${PORT}`)
 })
