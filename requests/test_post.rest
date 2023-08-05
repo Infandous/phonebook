@@ -1,0 +1,23 @@
+POST http://localhost:3001/api/persons
+Content-Type:application/json
+
+{
+    "name":"Arto Hellas",
+    "number":"444-333-2222"
+}
+
+###
+POST http://localhost:3001/api/persons
+content-type:application/json
+
+{
+    "number":"888-777-5555"
+}
+
+###
+POST http://localhost:3001/api/persons
+content-type:application/json
+
+{
+    "name":"Jon"
+}
